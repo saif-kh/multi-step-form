@@ -1,0 +1,219 @@
+.main-container {
+  max-width: 750px;
+  width: 100%;
+  min-height: 500px;
+  margin: auto;
+  background-color: var(--white);
+  box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.2);
+  border-radius: 1rem;
+  padding: 0.7rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.goofy-bg {
+  border-radius: inherit;
+  flex: 1;
+  background-image: url("/assets/bg-sidebar-desktop.svg");
+  background-size: cover;
+}
+
+.step-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 10%;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  height: fit-content;
+}
+
+.step-wrapper .circle {
+  height: 2rem;
+  aspect-ratio: 1;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.step-wrapper .current-step {
+  background-color: var(--light-blue);
+  border: none;
+  color: var(--marine-blue);
+}
+
+.step-wrapper .text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step-wrapper .text > div:nth-child(1) {
+  font-size: 0.7rem;
+  color: var(--cool-grey);
+}
+
+.step-wrapper .text > div:nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.ungoofy-side {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 5%;
+  --side-padding: 0.8rem;
+}
+
+.content-wrapper {
+  padding: 2rem var(--side-padding);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper > .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--marine-blue);
+}
+
+.content-wrapper > .title::first-letter {
+  text-transform: uppercase;
+}
+
+.content-wrapper > .sub-title {
+  color: var(--cool-grey);
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.content-wrapper > .sub-title::first-letter {
+  text-transform: uppercase;
+}
+
+.content-wrapper > .content {
+  margin-top: 1.6rem;
+}
+
+.buttons-wrapper {
+  background-color: var(--white);
+  padding: var(--side-padding);
+  display: flex;
+  align-items: center;
+}
+
+.buttons-wrapper button {
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.buttons-wrapper .secondary {
+  background: none;
+  color: var(--cool-grey);
+}
+
+.buttons-wrapper .secondary:hover,
+.buttons-wrapper .secondary:focus-visible {
+  color: var(--marine-blue);
+}
+
+.buttons-wrapper .primary {
+  background-color: var(--marine-blue);
+  padding: 0.7rem 1.2rem;
+  border-radius: 7px;
+  margin-left: auto;
+  color: var(--white);
+}
+
+.buttons-wrapper .primary:hover,
+.buttons-wrapper .primary:focus-visible {
+  background-color: var(--pastel-blue);
+}
+
+.buttons-wrapper .final {
+  background-color: var(--purple-blue);
+}
+
+@media (max-width: 610px) {
+  .step-wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+  .step-wrapper .text {
+    align-items: center;
+  }
+  .step-wrapper .text > div:nth-child(1) {
+    font-size: 0.6rem;
+  }
+  .step-wrapper .text > div:nth-child(2) {
+    font-size: 0.7rem;
+  }
+  .content-wrapper > .title {
+    font-size: 1.2rem;
+  }
+  .content-wrapper > .sub-title {
+    font-size: 0.8rem;
+  }
+  .buttons-wrapper button {
+    font-size: 0.7rem;
+  }
+  .ungoofy-side {
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    padding: 0 !important;
+  }
+  .main-container {
+    min-height: 100vh;
+    background-color: var(--light-grey);
+    border-radius: initial;
+    position: relative;
+    isolation: isolate;
+    padding: 0;
+  }
+  .goofy-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    background-image: url("/assets/bg-sidebar-mobile.svg");
+    border-radius: 0;
+    display: flex;
+    padding-top: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
+    z-index: -1;
+  }
+  .buttons-wrapper {
+    margin-top: 1.5rem;
+  }
+  .step-wrapper {
+    margin-top: 0;
+  }
+  .step-wrapper .text {
+    display: none;
+  }
+  .content-wrapper {
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-inline: 0.8rem;
+  }
+  .content-wrapper > .title {
+    font-size: 1.4rem;
+  }
+}

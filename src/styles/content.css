@@ -1,0 +1,351 @@
+/*--GENERAL--*/
+.interactive-container:hover,
+.interactive-container:focus-visible {
+  border: 1px solid var(--purple-blue);
+  cursor: pointer;
+}
+
+.chosen-card {
+  border: 1px solid var(--purple-blue) !important;
+  background-color: var(--magnolia);
+}
+
+.chosen-card .check {
+  background-color: var(--purple-blue);
+}
+
+/*--PERSONAL INFO--*/
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1rem;
+}
+
+.input-wrapper > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-wrapper .error-msg {
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: var(--red);
+}
+
+.input-wrapper label {
+  text-transform: capitalize;
+  color: var(--marine-blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input-wrapper > input {
+  margin-top: 0.3rem;
+  background: none;
+  padding-left: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--light-grey);
+  height: 2.4rem;
+  width: 100%;
+  font-weight: 700;
+  color: var(--marine-blue);
+}
+
+.input-wrapper .input-error {
+  border: 1px solid var(--red);
+}
+
+.input-wrapper > input:focus {
+  border: 1px solid var(--purple-blue);
+}
+
+/*--PLAN SELECTOR--*/
+
+.plans-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.plan-card {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid var(--light-grey);
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.plan-card .img {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+}
+
+.plan-card .text {
+  margin-top: 2.3rem;
+}
+
+.plan-card .text > div:nth-child(1) {
+  color: var(--marine-blue);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.plan-card .text > div:nth-child(2) {
+  color: var(--light-grey);
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+.plan-card .text > div:nth-child(3) {
+  color: var(--marine-blue);
+  font-weight: 500;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+}
+
+.period-picker {
+  background-color: var(--magnolia);
+  border-radius: 8px;
+  margin-top: 1rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.period-picker .text {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--cool-grey);
+  font-size: 0.9rem;
+}
+
+.period-picker .chosen-text {
+  color: var(--marine-blue);
+}
+
+.period-picker .period-picker-capsule {
+  width: 2.6rem;
+  aspect-ratio: 2;
+  border-radius: 10rem;
+  padding: 0.2rem;
+  background-color: var(--marine-blue);
+  cursor: pointer;
+}
+
+.period-picker .period-picker-capsule > div {
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: var(--white);
+  border-radius: 10rem;
+  transition: all 0.2s ease;
+}
+
+.period-picker .slide-to-right {
+  margin-left: 1.3rem;
+}
+
+/*--ADD ONS--*/
+
+.add-on-card {
+  border-radius: 8px;
+  border: 1px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding-inline: 1rem;
+}
+
+.add-on-card + .add-on-card {
+  margin-top: 0.5rem;
+}
+
+.add-on-card .check {
+  width: 1.1rem;
+  border-radius: 3px;
+  border: 1px solid var(--light-grey);
+  aspect-ratio: 1;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-on-card .text {
+  margin-left: 0.7rem;
+  margin-right: 0.3rem;
+}
+
+.add-on-card .text > div::first-letter {
+  text-transform: uppercase;
+}
+
+.add-on-card .text > div:nth-child(1) {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--marine-blue);
+}
+
+.add-on-card .text > div:nth-child(2) {
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: var(--cool-grey);
+}
+
+.add-on-card .price {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: var(--purple-blue);
+  font-weight: 500;
+}
+
+/*--SUMMARY--*/
+
+.results-wrapper {
+  background-color: var(--magnolia);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.base-pay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+}
+
+.base-pay .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.base-pay .text > div {
+  text-transform: capitalize;
+  color: var(--marine-blue);
+  font-weight: 700;
+}
+
+.base-pay .text > button {
+  background: none;
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: var(--cool-grey);
+}
+
+.base-pay > div:nth-child(2) {
+  color: var(--marine-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.add-ons-pay .card {
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.add-ons-pay .card:nth-child(1) {
+  margin-top: 0.8rem;
+  border-top: 1px solid var(--light-grey);
+}
+
+.add-ons-pay .card > div:nth-child(1) {
+  color: var(--cool-grey);
+  font-size: 0.9rem;
+}
+
+.add-ons-pay .card > div:nth-child(1)::first-letter {
+  text-transform: uppercase;
+}
+
+.add-ons-pay .card > div:nth-child(2) {
+  color: var(--marine-blue);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.total-wrapper {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+.total-wrapper > div:nth-child(1) {
+  color: var(--cool-grey);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.total-wrapper > div:nth-child(2) {
+  color: var(--purple-blue);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.thank-you-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thank-you-container > div:nth-child(2) {
+  margin-block: 1rem 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--marine-blue);
+}
+
+.thank-you-container > div:nth-child(3) {
+  font-size: 0.9rem;
+  color: var(--cool-grey);
+  line-height: 1.3rem;
+}
+
+.thank-you-container div {
+  text-align: center;
+}
+
+@media (max-width: 610px) {
+  .plans-wrapper {
+    flex-direction: column;
+  }
+  .plan-card {
+    display: flex;
+    width: 100%;
+    gap: 0.6rem;
+  }
+  .plan-card .text {
+    margin-top: 0;
+  }
+  .add-on-card .price {
+    font-size: 0.7rem;
+  }
+  .add-on-card .text > div:nth-child(1) {
+    font-size: 0.8rem;
+  }
+
+  .add-on-card .text > div:nth-child(2) {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .thank-you-container {
+    background-color: var(--white);
+    padding: 2rem 0.8rem;
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-inline: 0.8rem;
+  }
+}
